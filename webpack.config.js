@@ -31,6 +31,17 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
+	 new FaviconsWebpackPlugin({  //https://www.npmjs.com/package/favicons-webpack-plugin
+		logo: "./src/icon.svg",
+		inject: true,
+		favicons: {
+			appName: "appName",
+			appDescription: "appDescription",
+			developerName: "Khabibullin_Daniel",
+			background: '#ddd',
+			theme_color: '#333',
+		},
+	}),
     // new CopyPlugin({
     //   patterns: [{ from: 'static', to: './' }],
     // }),
